@@ -15,8 +15,8 @@ for objTrainPositionsNode in objTrainPositionsNodes:
     traincode = traincodenode.firstChild.nodeValue.strip()
 print (traincode)'''
 
-TrainLatitudeNodes = doc.getElementsByTagName("TrainLatitude")
-for TrainLatitudeNode in TrainLatitudeNodes:
-    traincodenode = TrainLatitudeNode.getElementsByTagName("TrainCode").item(0)
-    traincode = traincodenode.firstChild.nodeValue.strip()
-print (traincode)
+objTrainPositionsNodes = doc.getElementsByTagName("TrainLatitude")
+for objTrainPositionsNodes in objTrainPositionsNodes:
+    trainLatnode = objTrainPositionsNodes.getElementsByTagName("TrainLatitude").item(0)
+    trainLat = trainLatnode.firstChild.nodeValue.strip()
+print (trainLat)
