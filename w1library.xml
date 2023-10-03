@@ -1,0 +1,22 @@
+<?xml version="1.0" ?><ArrayofCatalogues>
+    <library>
+        <catalogue type="Technical">
+            <book ISBN="1491952024">
+                <title>JavaScript – The Definitive Guide</title>
+                <author>David Flanagan</author>
+            </book>
+            <book ISBN="1718502702">
+                <title>Python Crash Course</title>
+                <author>Eric Matthes</author>
+            </book>
+        </catalogue>
+        <catalogue type="Cookery">
+            <book ISBN="0563362499">
+                <title>Delia's Complete Cookery Course</title>
+                <author>Delia Smith</author>
+            <book ISBN="0007259700">
+                <title>Bake</title>
+                <author>Rachel Allen</author>
+            </book>
+        </catalogue>
+    </library>
