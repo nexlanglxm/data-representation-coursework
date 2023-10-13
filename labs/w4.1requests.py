@@ -12,9 +12,6 @@ def readbooks():
         print("Something is not functioning as intended")
     return response.json()
 
-if __name__ == "__main__":
-    print(readbooks())
-
 def readbook(id):
     geturl = url + "/" + str(id)
     response = requests.get(geturl)
@@ -34,3 +31,24 @@ def updatebook(id, book):
     response = requests.put(puturl, json=book)
     return response.json()
 
+def deletebook(id):
+    deleteurl = url + "/" + str(id)
+    response = requests.delete(deleteurl)
+    return response.json()
+
+if __name__ == "__main__":
+    '''
+    book= {
+        'Author: teasing',
+        'Title: el titulo',
+        "Price": 15
+    }
+    bookdiff= {
+        "Price":16        
+    }
+    '''
+    #print(readbook(4))
+    #print(readbooks())
+    #print(createbook(book))
+    #print(updatebook(5, bookdiff))
+    print(deletebook())
