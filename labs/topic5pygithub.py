@@ -4,7 +4,8 @@ import requests
 
 apikey = gitconfig['gitkey']
 g = Github(apikey)
-print(g)
+# print(g)
+
 # for repo in g.get_user().get_repos():
 #     print(repo.name)
 repo = g.get_repo("nexlanglxm/thepublicone")
@@ -22,4 +23,4 @@ newContents = contentofFile + "\n more shtuff, \n and more"
 # print(newContents)
 
 gitHubresponse = repo.update_file(fileInfo.path,"updated via prog",newContents,fileInfo.sha)
-#print (gitHubresponse)
+print (gitHubresponse)
