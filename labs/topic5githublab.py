@@ -3,6 +3,7 @@ import urllib.parse
 import json
 from config import gitconfig
 
+filename = "private-repo.json"
 gitkey = gitconfig["gitkey"]
 
 url = 'https://github.com/nexlanglxm/theprivateone'
