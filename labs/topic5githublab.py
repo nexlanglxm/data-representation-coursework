@@ -6,7 +6,7 @@ from config import gitconfig
 filename = "private-repo.json"
 gitkey = gitconfig["gitkey"]
 
-url = 'https://github.com/nexlanglxm/theprivateone'
+url = 'https://api.github.com/nexlanglxm/theprivateone'
 
 response = requests.get(url, auth=('token',gitkey))
 
