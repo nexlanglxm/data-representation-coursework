@@ -19,7 +19,7 @@ testing
 print(contentsofFile) 
 '''
 #replacing instances
-newContent = contentsofFile.replace('Neil','Andrew')
+newContent = contentsofFile.replace('Andrew', 'Neil')
 
 gitHubresponse = repo.update_file(fileInfo.path,"updated by prog",newContent,fileInfo.sha)
 #print(gitHubresponse)
