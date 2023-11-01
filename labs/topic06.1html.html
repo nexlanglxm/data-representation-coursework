@@ -4,10 +4,24 @@
 <head>
     <title>View books</title>
 </head>
+<script>
+    function showCreate() {
+        document.getElementById('button-showCreate').style.display = "none"
+        document.getElementById('bookTable').style.display = "none"
+        document.getElementById('createUpdateForm').style.display = "block"
+        document.getElementById('createLabel').style.display = "inline"
+        document.getElementById('updateLabel').style.display = "none"
+        document.getElementById('button-doCreate').style.display = "block"
+        document.getElementById('button-doUpdate').style.display = "none"
+    }
+
+
+
+</script>
 
 <body>
     <h1>Books</h1>
-    <button id="button-showCreate">Create a book</button>
+    <button id="button-showCreate" onclick="showCreate">Create a book</button>
     <div>
         <table class="table" id="bookTable" border="1">
             <tr>
@@ -29,10 +43,10 @@
         </table>
     </div>
 
-    <div id='createUpdateForm' style="display:none">
+    <div id='createUpdateForm'>
         <h2>
-            <span>Create a</span>
-            <span style="display:none">Update this</span> Book
+            <span id="createLabel">Create a book</span><span id="updateLabel" style="display:none">update</span>
+
         </h2>
 
         id <input type="text" name="id"><br />
@@ -40,13 +54,13 @@
         Author <input type="text" name="author"><br />
         Price <input type="number" name="price"><br />
         Just to show select <select name="status">
-            <option value="instock">in stock</option>
-            <option value="outstock">out of stock</option>
-            <option value="other">out of print</option>
+            <option value="instock">In stock</option>
+            <option value="outstock">Out of stock</option>
+            <option value="other">Out of print</option>
         </select><br />
 
-        <span><button>Create</button></span>
-        <span><button style="display:none">Update</button></span>
+        <span><button id="button-doCreate" onclick="doCreate()">Create</button></span>
+        <span><button id="button-doUpdate" onclick="doUpdate()">Update</button></span>
 
     </div>
 
