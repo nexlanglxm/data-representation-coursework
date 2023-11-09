@@ -15,8 +15,14 @@
         document.getElementById('button-doUpdate').style.display = "none"
     }
 
+    function showUpdate() {
+        document.getElementById('button-showUpdate').style.display = "show"
+    }
 
-
+    function doCreate(){
+        console.log("Creating a book")
+    }
+    
 </script>
 
 <body>
@@ -37,7 +43,7 @@
                 <td>Harry Potter does something</td>
                 <td>JK Rowling</td>
                 <td>12</td>
-                <td><button>update</button></td>
+                <td><button onclick="showUpdate(this)">update</button></td>
                 <td><button>delete</button></td>
             </tr>
         </table>
@@ -60,7 +66,7 @@
         </select><br />
 
         <span><button id="button-doCreate" onclick="doCreate()">Create</button></span>
-        <span><button id="button-doUpdate" onclick="doUpdate()">Update</button></span>
+        <span><button id="button-doUpdate" onclick="doUpdate()" onclick="showUpdate(this)">Update</button></span>
 
     </div>
 
