@@ -20,7 +20,6 @@
                 "data": "",
                 "dataType": "JSON",
                 "success": function (result) {
-                    //console.log(result);
                     callback(result)
 
                 },
@@ -31,7 +30,6 @@
 
         }
 
-        // testing code
         function createBook(book, callback) {
             console.log(JSON.stringify(book));
             $.ajax({
@@ -51,7 +49,6 @@
 
         }
         function updateBook(book, callback) {
-            //console.log(JSON.stringify(book));
             $.ajax({
                 "url": "http://andrewbeatty1.pythonanywhere.com/books/" + encodeURI(book.id),
                 "method": "PUT",
@@ -85,13 +82,8 @@
 
         }
 
-
-
-        // testing code
-
         function processGetAllResponse(result) {
             console.log("in process")
-            //console.log(result)
             for (book of result) {
                 console.log(book)
                 // issue the format of the book object is different from lab06.02
@@ -119,15 +111,13 @@
             console.log(result)
         }
         book = { id: 155, "Price": 999 }
-        //updateBook(book,processUpdateResponse)
-
-        ////delete
 
         function processDeleteResponse(result) {
-            console.log("in pprocess delete")
+            console.log("in process delete")
             console.log(result)
         }
         //deleteBook(155,processUpdateResponse) 
     </script>
+</body>
 
 </html>
