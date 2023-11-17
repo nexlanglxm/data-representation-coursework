@@ -1,8 +1,14 @@
+# this is the standard Python gitignore file from GitHub
+# user input to be ignored
+config.py
+topic 8 server
+neilsnotes.ipynb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-config.py
+
 # C extensions
 *.so
 
