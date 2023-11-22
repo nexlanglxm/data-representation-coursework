@@ -1,11 +1,40 @@
-# Project Title: Spotify Personalized Playlist Generator
+# Project: Spotify Personalized Playlist Generator
 
 ## Description:- Briefly explain the purpose and functionality of the project.- Mention the integration with Spotify's API and the potential integration with Genius API later
 
+## **Project Brief:**
+
+Write a project that demonstrates that you understand creating and consuming RESTful APIs.
+
+## Project Assessment Strategy
+
+Level 1: 40-45%
+
+- Basic FLASK server
+- REST API (to perform CRUD operations)
+- One database table
+- Accompanying web interface, using AJAX calls, to perform CRUD operations
+
+Level 2: 45-50%
+
+- More than one database table
+
+Level 3: 50-55%
+
+- Uses authorization
+
+EXTRAS:
+
+Web page looks nice.                        + 0-10%
+More complicated API.                       + 0-10%
+Server links to a third party API.          + 0-10%
+Third party API requires authentication.    + 0-10%
+Hosted online (Pythonanywhere, Azure)       + 10%
+
 ## **Objective:**
 
-- The main goals of the project
-- building a web application to generate personalized playlists based on user preferences
+- The main goals of the project:
+- The development of a web application to generate personalized playlists based on user preferences.
 
 ## **Features and Functionality:**
 
@@ -24,7 +53,8 @@
 
 ## **Development Steps:**
 
-- Outline the steps you plan to follow for project development:
+- Set up the folder environment.
+- Develop this READme.md file.
 - Set up Flask environment.
 - Implement user input functionality.
 - Integrate Spotify API for playlist creation.
@@ -32,8 +62,10 @@
 
 ## **Folder Structure:**
 
-- Provide an overview of how the project files will be organized.
 - Separate folders for frontend, backend, API files, etc.
+- The whole project is contained in a `project` folder.
+- The `static` folder contains
+- The `templates` folder contains the index html file, which will be displayed to the user.
 
 ## **Installation and Usage:**
 
