@@ -1,0 +1,19 @@
+/* found out that a css file should be stored in a static folder from flasks creators (Pallets, n.d.)*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 550px;
+    margin: 0 auto;
+
+}
+
