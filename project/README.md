@@ -64,7 +64,7 @@ Hosted online (Pythonanywhere, Azure)       + 10%
 
 - Separate folders for frontend, backend, API files, etc.
 - The whole project is contained in a `project` folder.
-- The `static` folder contains
+- The `static` folder contains a `stylesheet.css` file,
 - The `templates` folder contains the index html file, which will be displayed to the user.
 
 ## **Installation and Usage:**
