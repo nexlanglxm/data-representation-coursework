@@ -1,9 +1,10 @@
 /* found out that a css file should be stored in a static folder from flasks creators (Pallets, n.d.)*/
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #000000;
     margin: 0;
     padding: 20px;
+    color: #333
 }
 
 h1 {
@@ -14,7 +15,7 @@ h1 {
 form {
     max-width: 550px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #000000;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -28,7 +29,7 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 input[type="text"] {
@@ -42,7 +43,7 @@ input[type="text"] {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #18813b;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -50,5 +51,5 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: rgb(21, 198, 54);
 }
