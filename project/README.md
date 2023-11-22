@@ -1,6 +1,8 @@
 # Project: Spotify Personalized Playlist Generator
 
-## Description:- Briefly explain the purpose and functionality of the project.- Mention the integration with Spotify's API and the potential integration with Genius API later
+## **Description**
+
+The SPG is a web application designed to create personalized playlists for users based on their music preferences. This project aims to provide an interactive platform where userscan input their favorite artists, genres, or songs, and the application interacts with the Spotify API to generate customized playlists.
 
 ## **Project Brief:**
 
