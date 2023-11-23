@@ -84,6 +84,19 @@ git clone https://github.com/nexlanglxm/data-representation-coursework.git
 cd project
 ```
 
+2. Set up a virtual environment (recommended):
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+3. Install required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
 - Instructions for running the server and accessing the application.
 
 ## **References and Resources:**
