@@ -66,11 +66,24 @@ The SPG is a web application designed to create personalized playlists for users
 - The whole project is contained in a `project` folder.
 - The `static` folder contains a `stylesheet.css` file,
 - The `templates` folder contains the index html file, which will be displayed to the user.
+- The `routes` folder contains all the different python files which interact with the API,
 
 ## **Installation and Usage:**
 
-- Guide users on how to set up and run the application:
-- Installation steps for dependencies.
+### Prerequisites
+
+- Python 3.11.4
+- pip package manager
+
+### Installation Steps
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/nexlanglxm/data-representation-coursework.git
+cd project
+```
+
 - Instructions for running the server and accessing the application.
 
 ## **References and Resources:**
