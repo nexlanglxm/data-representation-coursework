@@ -1,9 +1,5 @@
 # Project: Spotify Personalized Playlist Generator
 
-## **Description**
-
-The SPG is a web application designed to create personalized playlists for users based on their music preferences. This project aims to provide an interactive platform where userscan input their favorite artists, genres, or songs, and the application interacts with the Spotify API to generate customized playlists.
-
 ## **Project Brief:**
 
 Write a project that demonstrates that you understand creating and consuming RESTful APIs.
@@ -33,21 +29,22 @@ Server links to a third party API.          + 0-10%
 Third party API requires authentication.    + 0-10%
 Hosted online (Pythonanywhere, Azure)       + 10%
 
-## **Objective:**
+## **Description**
 
-- The main goals of the project:
-- The development of a web application to generate personalized playlists based on user preferences.
+The SPG is a web application designed to create personalized playlists for users based on their music preferences. This project aims to provide an interactive platform where userscan input their favorite artists, genres, or songs, and the application interacts with the Spotify API to generate customized playlists.
+
+## **Objective**
+
 
 ## **Features and Functionality:**
 
-- The core functionalities of the web application, such as:
-- User input for favorite artists, genres, or songs.
-- Interaction with the Spotify API to fetch and create playlists.
-- Potential integration with the Genius API for song lyrics.
+- User Input: Users can input their favorite artists, genres, or songs through an intuitive, user-friendly web interface.
+- Spotify API Integration: Interaction with the Spotify API to retrieve music data based on user preferences.
+- Playlist Generation: Utilizing the gathered preferences, the application creates personalized playlists for users.
+- Potential Integration with Genius API: Planned integration with the Genius API for additional song lyrics information (future expansion).
 
 ## **Technology Stack:**
 
-- List of the technologies and frameworks I plan to use:
 - Python for backend development.
 - Flask for creating the RESTful API.
 - Spotify API for music data.
@@ -60,6 +57,7 @@ Hosted online (Pythonanywhere, Azure)       + 10%
 - Set up Flask environment.
 - Implement user input functionality.
 - Integrate Spotify API for playlist creation.
+- Implement user authentication.
 - (Later stage) Integrate Genius API for song lyrics.
 
 ## **Folder Structure:**
