@@ -97,7 +97,37 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-- Instructions for running the server and accessing the application.
+### Configuration
+
+1. Obtain Spotify API credentials from the Spotify Developer Dashboard.
+2. Update auth.py with your Spotify API client ID and client secret.
+
+### Running the Application
+
+Start the Flask server:
+
+```bash
+python app.py
+```
+
+Access the application in your web browser:
+
+```arduino
+http://127.0.0.1:5000
+```
+
+### Usage
+
+Upon accessing the application, navigate to the specified endpoints to perform actions:
+
+- /login: Initiate Spotify authentication.
+- /generate_playlist: Create playlists based on user input.
+- /get_user_profile: Retrieve user's Spotify profile.
+
+### Additional Notes
+
+Modify the application's functionalities and routes according to your requirements.
+For a production deployment, consider configuring environment variables and using a secure secret key for Flask session management.
 
 ## **References and Resources:**
 
