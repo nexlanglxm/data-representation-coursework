@@ -4,7 +4,7 @@ import requests
 spotify_bp = Blueprint('spotify', __name__)
 
 CLIENT_ID = '91ad79bc13fe4e21b070ff8c7a8271ca'
-CLIENT_SECRET = 'YOUR_CLIENT_SECRET' # Does this need to be safe?
+CLIENT_SECRET = 'YOUR_CLIENT_SECRET' #this needs to be safe
 REDIRECT_URI = 'http://127.0.0.1:5000/callback'
 
 @spotify_bp.route('/get_user_profile')
@@ -18,13 +18,18 @@ def get_user_profile():
     else:
         return 'Access token missing. Please authenticate.'
 
-
+# function for user input
 @spotify_bp.route('/generate_playlist', methods=['POST'])
 def generate_playlist():
-    artists = request.form.get('artists')
-    songs = request.form.get('songs')
-    genres = request.form.get('genres')
-    return 'Generated Playlist Page'
+    access_token = session.get('access_token')
+    if access_token:
+        artists = request.form.get('artists')
+        songs = request.form.get('songs')
+        genres = request.form.get('genres')
+    #will need to implement actual logic here
+        return 'Generated Playlist Page' 
+    else:
+        return 'Access token is missing. Please be sure to authenticate.'
 
 @spotify_bp.route('/callback')
 def callback():
