@@ -9,12 +9,11 @@
 
 <body>
     <h1>Log in with Spotify</h1>
-    <a href="/login"> <!-- Link to your Flask route that initiates authentication -->
-        <button>Login with Spotify</button>
-    </a>
-    <div id="status-message"></div>
-
+    <form action="/login" method="GET">
+        <!-- Your login form fields -->
+        <input type="submit" value="Login">
     </form>
+
 </body>
 
 </html>
