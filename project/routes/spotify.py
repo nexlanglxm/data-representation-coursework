@@ -1,6 +1,6 @@
 from flask import Blueprint, request, session, jsonify
 import requests
-from auth import get_access_token, get_user_profile  # Import necessary functions from auth.py
+from routes.auth import get_access_token, get_user_profile  # Import necessary functions from auth.py
 
 spotify_bp = Blueprint('spotify', __name__)
 
