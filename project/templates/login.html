@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Authentication</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+
+<body>
+    <h1>Log in with Spotify</h1>
+    <a href="/login"> <!-- Link to your Flask route that initiates authentication -->
+        <button>Login with Spotify</button>
+    </a>
+    <div id="status-message"></div>
+
+    </form>
+</body>
+
+</html>
