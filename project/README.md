@@ -35,7 +35,6 @@ The SPG is a web application designed to create personalized playlists for users
 
 ## **Objective**
 
-
 ## **Features and Functionality:**
 
 - User Input: Users can input their favorite artists, genres, or songs through an intuitive, user-friendly web interface.
@@ -131,4 +130,6 @@ For a production deployment, consider configuring environment variables and usin
 
 ## **References and Resources:**
 
-- Including links to the Spotify API documentation [https://any-api.com/spotify_com/spotify_com/docs/API_Description], Genius API documentation (<https://rapidapi.com/Glavier/api/genius-song-lyrics1/>), and any other resources used.
+- [Flask documentation](https://github.com/pallets/flask/blob/3.0.x/docs/tutorial/static.rst)
+- [Spotify Developer Tools](https://developer.spotify.com/)
+- Including links to the Spotify [API documentation](https://any-api.com/spotify_com/spotify_com/docs/API_Description), Genius [API documentation](https://rapidapi.com/Glavier/api/genius-song-lyrics1/), and any other resources used.
