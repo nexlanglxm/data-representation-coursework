@@ -4,7 +4,7 @@ import requests
 auth_bp = Blueprint('auth', __name__)
 
 CLIENT_ID = '91ad79bc13fe4e21b070ff8c7a8271ca'
-CLIENT_SECRET = 'YOUR_CLIENT_SECRET'
+CLIENT_SECRET = '83f62edc052748e5bc6ca392e9e47937'
 REDIRECT_URI = 'http://127.0.0.1:5000/callback'
 
 @auth_bp.route('/login')
@@ -23,18 +23,20 @@ def login():
 @auth_bp.route('/callback')
 def callback():
     code = request.args.get('code')
-    access_token = get_access_token(code)  # Utilize the defined function from spotify.py
+    access_token = get_access_token(code) 
     session['access_token'] = access_token
     return 'Authentication successful. Access token obtained.'
 
 @auth_bp.route('/logout')
 def logout():
-    # Placeholder logic for logout
-    return 'Logout Page'
+    if 'access_token' in session:
+        access_token = session['access_token']
+        session.pop('access_token') #clears the access token from the session 
+        
+    return 'Logged out successfully!'
 
-# Define the get_access_token function here
 def get_access_token(code):
-    token_url = 'https://accounts.spotify.com/api/token'
+    token_url = 'https://accounts.spotify.com/api/token' # URL to get token from Spotify accounts
     token_data = {
         'grant_type': 'authorization_code',
         'code': code,
@@ -46,7 +48,6 @@ def get_access_token(code):
     access_token = token_response.json().get('access_token')
     return access_token
 
-# Define the get_user_profile function here
 def get_user_profile(access_token):
     headers = {'Authorization': f'Bearer {access_token}'}
     profile_response = requests.get('https://api.spotify.com/v1/me', headers=headers)
