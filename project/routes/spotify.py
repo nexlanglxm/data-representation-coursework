@@ -8,12 +8,12 @@ CLIENT_ID = '91ad79bc13fe4e21b070ff8c7a8271ca'
 CLIENT_SECRET = 'YOUR_CLIENT_SECRET'  # This needs to be safe
 REDIRECT_URI = 'http://127.0.0.1:5000/callback'
 
-def create_playlist(user_id, access_token, playlist_name):
+def create_playlist(user_id, access_token, playlist_name): # Define the create_playlist function
     headers = {
         'Authorization': f'Bearer {access_token}',
         'Content-Type': 'application/json'
     }
-    playlist_data = {
+    playlist_data = { # Change the name and description if you like
         'name': playlist_name,
         'description': 'Generated playlist based on user input',
         'public': False  # Change to True if you want the playlist to be public
@@ -32,9 +32,9 @@ def callback():
 @spotify_bp.route('/get_user_profile')
 def get_user_profile_route():
     access_token = session.get('access_token')
-    if access_token:
+    if access_token:# Check if access token is present
         profile_data = get_user_profile(access_token)
-        return jsonify(profile_data)
+        return jsonify(profile_data)# Return the profile data as JSON
     else:
         return 'Access token missing. Please authenticate.'
 
