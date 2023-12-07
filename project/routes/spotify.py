@@ -5,7 +5,7 @@ from routes.auth import get_access_token, get_user_profile  # Import necessary f
 spotify_bp = Blueprint('spotify', __name__)
 
 CLIENT_ID = '91ad79bc13fe4e21b070ff8c7a8271ca'
-CLIENT_SECRET = '83f62edc052748e5bc6ca392e9e47937'  # This needs to be safe
+CLIENT_SECRET = 'placeholder'  # This needs to be safe
 REDIRECT_URI = 'http://127.0.0.1:5000/callback'
 
 def create_playlist(user_id, access_token, playlist_name): # Define the create_playlist function

@@ -4,7 +4,7 @@ import requests
 auth_bp = Blueprint('auth', __name__)
 
 CLIENT_ID = '91ad79bc13fe4e21b070ff8c7a8271ca'
-CLIENT_SECRET = '83f62edc052748e5bc6ca392e9e47937'
+CLIENT_SECRET = 'placeholder'
 REDIRECT_URI = 'http://127.0.0.1:5000/callback'
 
 @auth_bp.route('/login')
