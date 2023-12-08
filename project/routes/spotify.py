@@ -1,4 +1,4 @@
-from flask import Blueprint, request, session, jsonify
+from flask import Blueprint, redirect, request, session, jsonify, url_for
 import requests
 from routes.auth import get_access_token, get_user_profile  # Import necessary functions from auth.py
 
@@ -21,13 +21,6 @@ def create_playlist(user_id, access_token, playlist_name): # Define the create_p
     create_playlist_url = f'https://api.spotify.com/v1/users/{user_id}/playlists'
     create_playlist_response = requests.post(create_playlist_url, headers=headers, json=playlist_data)
     return create_playlist_response
-
-@spotify_bp.route('/callback')
-def callback():
-    code = request.args.get('code')
-    access_token = get_access_token(code)
-    session['access_token'] = access_token
-    return 'Authentication successful. Access token obtained.'
 
 @spotify_bp.route('/get_user_profile')
 def get_user_profile_route():
@@ -54,4 +47,4 @@ def generate_playlist():
         else:
             return 'Failed to fetch user profile.'
     else:
-        return 'Access token is missing. Please authenticate.'
+        return redirect(url_for('auth.login'))
