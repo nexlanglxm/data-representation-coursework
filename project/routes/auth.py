@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, session, request, jsonify
+from flask import Blueprint, redirect, session, request, jsonify, url_for
 import requests
 
 auth_bp = Blueprint('auth', __name__)
@@ -25,7 +25,7 @@ def callback():
     code = request.args.get('code')
     access_token = get_access_token(code) 
     session['access_token'] = access_token
-    return 'Authentication successful. Access token obtained.'
+    return redirect(url_for('spotify.generate_playlist'))
 
 @auth_bp.route('/logout')
 def logout():
