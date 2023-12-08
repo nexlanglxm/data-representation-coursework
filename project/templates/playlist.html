@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spotify Playlist Generator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+
+  <body>
+    <h1>Welcome to the Spotify Playlist Generator!</h1>
+    <form action="/generate_playlist" method="POST">
+      <div class="form-group">
+        <label for="artists">Favorite Artists:</label>
+        <input
+          type="text"
+          id="artists"
+          name="artists"
+          placeholder="Enter favorite artists"
+        />
+      </div>
+      <div class="form-group">
+        <label for="genres">Favorite Genres:</label>
+        <input
+          type="text"
+          id="genres"
+          name="genres"
+          placeholder="Enter favorite genres"
+        />
+      </div>
+      <div class="form-group">
+        <label for="songs">Favorite Songs:</label>
+        <input
+          type="text"
+          id="songs"
+          name="songs"
+          placeholder="Enter favorite songs"
+        />
+      </div>
+      <button type="submit">Generate Playlist</button>
+    </form>
+  </body>
+</html>
