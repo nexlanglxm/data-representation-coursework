@@ -14,6 +14,10 @@ from routes.spotify import spotify_bp
 def index():
     return render_template('index.html')
 
+@app.route('/playlist')
+def playlist():
+    return render_template('playlist.html')
+
 app.register_blueprint(auth_bp)
 app.register_blueprint(spotify_bp)
 #app.register_blueprint(other_bp)
