@@ -8,7 +8,7 @@ CLIENT_ID = '91ad79bc13fe4e21b070ff8c7a8271ca'
 CLIENT_SECRET = 'placeholder'  # This needs to be safe
 REDIRECT_URI = 'http://127.0.0.1:5000/callback'
 
-def create_playlist(user_id, access_token, playlist_name): # Define the create_playlist function
+def create_playlist(user_id, access_token, playlist_name): # handles the api call to create a playlist on spotify
     headers = {
         'Authorization': f'Bearer {access_token}',
         'Content-Type': 'application/json'
@@ -31,13 +31,13 @@ def get_user_profile_route():
     else:
         return 'Access token missing. Please authenticate.'
 
-@spotify_bp.route('/generate_playlist', methods=['POST'])
+@spotify_bp.route('/generate_playlist', methods=['POST']) # This route will be called when the form is submitted
 def generate_playlist():
     access_token = session.get('access_token')
     if access_token:
         playlist_name = request.form.get('playlist_name')
         profile_data = get_user_profile(access_token)
-        if profile_data:
+        if profile_data: # Check if profile data is present
             user_id = profile_data.get('id')
             create_playlist_response = create_playlist(user_id, access_token, playlist_name)
             if create_playlist_response.status_code == 201:
