@@ -1,8 +1,16 @@
 # start with a basic flask application setup
 from flask import Flask, render_template
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
+
+load_dotenv()
+
+CLIENT_ID = os.getenv('CLIENT_ID')
+CLIENT_SECRET = os.getenv('CLIENT_SECRET')
+REDIRECT_URI = os.getenv('REDIRECT_URI')
 
 # Registering blueprints for different modules
 from routes.auth import auth_bp
