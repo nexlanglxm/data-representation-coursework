@@ -17,13 +17,24 @@ from routes.auth import auth_bp
 from routes.spotify import spotify_bp
 #from routes.other_routes import other_bp
 
-# rendering the html
 @app.route('/')
 def index():
+    '''
+    Renders the index.html template when the root URL is accessed.
+
+    Returns:
+        rendered_template: HTML content for the index page.
+    '''
     return render_template('index.html')
 
 @app.route('/playlist')
 def playlist():
+    '''
+    Renders the playlist.html template when the '/playlist' URL is accessed.
+
+    Returns:
+        rendered_template: HTML content for the playlist page.
+    '''
     return render_template('playlist.html')
 
 app.register_blueprint(auth_bp)
