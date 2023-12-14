@@ -2,18 +2,28 @@ from flask import Blueprint, redirect, request, session, jsonify, url_for
 import requests
 from routes.auth import get_access_token, get_user_profile  # Import necessary functions from auth.py
 
-spotify_bp = Blueprint('spotify', __name__)
+spotify_bp = Blueprint('spotify', __name__) # Create a Blueprint object
 
 CLIENT_ID = '91ad79bc13fe4e21b070ff8c7a8271ca'
 CLIENT_SECRET = 'placeholder'  # This needs to be safe
 REDIRECT_URI = 'http://127.0.0.1:5000/callback'
 
-def create_playlist(user_id, access_token, playlist_name): # handles the api call to create a playlist on spotify
+def create_playlist(user_id, access_token, playlist_name):
+    '''
+    Handles the API call to create a playlist on Spotify
+    
+    Args:
+        user_id: Spotify user ID
+        access_token: Access token to authenticate API calls
+        playlist_name: Name of the playlist to be created
+    Returns:
+        requests.Response: Contains the result of the playlist creation request
+    '''
     headers = {
         'Authorization': f'Bearer {access_token}',
         'Content-Type': 'application/json'
     }
-    playlist_data = { # Change the name and description if you like
+    playlist_data = {
         'name': playlist_name,
         'description': 'Generated playlist based on user input',
         'public': False  # Change to True if you want the playlist to be public
@@ -24,18 +34,30 @@ def create_playlist(user_id, access_token, playlist_name): # handles the api cal
 
 @spotify_bp.route('/get_user_profile')
 def get_user_profile_route():
+    '''
+    Route to get user profile data
+    
+    Returns:
+        JSON: User profile data or error message
+    '''
     access_token = session.get('access_token')
-    if access_token:# Check if access token is present
+    if access_token: # Check if access token is present
         profile_data = get_user_profile(access_token)
-        return jsonify(profile_data)# Return the profile data as JSON
+        return jsonify(profile_data)
     else:
         return 'Access token missing. Please authenticate.'
 
-@spotify_bp.route('/generate_playlist', methods=['POST']) # This route will be called when the form is submitted
+@spotify_bp.route('/generate_playlist', methods=['POST'])
 def generate_playlist():
+    '''
+    Route to generate a playlist based on user input when the form is submitted
+    
+    Returns:
+        str: Success or error message or redirects to login
+    '''
     access_token = session.get('access_token')
     if access_token:
-        playlist_name = request.form.get('playlist_name')
+        playlist_name = request.form.get('playlist_name') # Get the playlist name from the form
         profile_data = get_user_profile(access_token)
         if profile_data: # Check if profile data is present
             user_id = profile_data.get('id')
@@ -47,4 +69,4 @@ def generate_playlist():
         else:
             return 'Failed to fetch user profile.'
     else:
-        return redirect(url_for('auth.login'))
+        return redirect(url_for('auth.login')) # Redirect to login if access token is missing
