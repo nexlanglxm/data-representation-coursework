@@ -13,9 +13,24 @@ CLIENT_SECRET = os.getenv('CLIENT_SECRET')
 REDIRECT_URI = os.getenv('REDIRECT_URI')
 
 def generate_code_verifier():
+    '''
+    Generates a random string that will be used as the code verifier for the OAuth2.0 PKCE flow.
+    
+    Returns:
+        str: Random string
+    '''
     return base64.urlsafe_b64encode(secrets.token_bytes(32)).decode('utf-8').rstrip('=')
 
 def generate_code_challenge(code_verifier):
+    '''
+    Generates a code challenge for the given code verifier string using SHA256 hashing algorithm.
+    
+    Args:
+        code_verifier: Code verifier string
+        
+    Returns:
+        str: Code challenge string
+    '''
     code_challenge = hashlib.sha256(code_verifier.encode('utf-8')).digest()
     return base64.urlsafe_b64encode(code_challenge).decode('utf-8').rstrip('=')
 
