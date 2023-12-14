@@ -3,12 +3,14 @@ import requests
 import hashlib
 import base64
 import secrets
+from dotenv import load_dotenv
+import os
 
 auth_bp = Blueprint('auth', __name__)
 
-CLIENT_ID = '91ad79bc13fe4e21b070ff8c7a8271ca'
-CLIENT_SECRET = 'placeholder'
-REDIRECT_URI = 'http://127.0.0.1:5000/callback'
+CLIENT_ID = os.getenv('CLIENT_ID')
+CLIENT_SECRET = os.getenv('CLIENT_SECRET')
+REDIRECT_URI = os.getenv('REDIRECT_URI')
 
 def generate_code_verifier():
     return base64.urlsafe_b64encode(secrets.token_bytes(32)).decode('utf-8').rstrip('=')

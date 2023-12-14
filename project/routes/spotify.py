@@ -1,12 +1,15 @@
 from flask import Blueprint, redirect, request, session, jsonify, url_for
 import requests
 from routes.auth import get_access_token, get_user_profile  # Import necessary functions from auth.py
+from dotenv import load_dotenv
+import os
 
 spotify_bp = Blueprint('spotify', __name__) # Create a Blueprint object
 
-CLIENT_ID = '91ad79bc13fe4e21b070ff8c7a8271ca'
-CLIENT_SECRET = 'placeholder'  # This needs to be safe
-REDIRECT_URI = 'http://127.0.0.1:5000/callback'
+CLIENT_ID = os.getenv('CLIENT_ID')
+CLIENT_SECRET = os.getenv('CLIENT_SECRET')
+REDIRECT_URI = os.getenv('REDIRECT_URI')
+
 
 def create_playlist(user_id, access_token, playlist_name):
     '''
