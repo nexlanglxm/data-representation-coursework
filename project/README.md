@@ -76,21 +76,21 @@ The SPG is a web application designed to create personalized playlists for users
 
 ### Installation Steps
 
-1. Clone the repository:
+1.Clone the repository:
 
 ```bash
 git clone https://github.com/nexlanglxm/data-representation-coursework.git
 cd project
 ```
 
-2. Set up a virtual environment (recommended):
+2.Set up a virtual environment (recommended):
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-3. Install required dependencies:
+3.Install required dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -123,13 +123,8 @@ Upon accessing the application, navigate to the specified endpoints to perform a
 - /generate_playlist: Create playlists based on user input.
 - /get_user_profile: Retrieve user's Spotify profile.
 
-### Additional Notes
-
-Modify the application's functionalities and routes according to your requirements.
-For a production deployment, consider configuring environment variables and using a secure secret key for Flask session management.
-
 ## **References and Resources:**
 
 - [Flask documentation](https://github.com/pallets/flask/blob/3.0.x/docs/tutorial/static.rst)
 - [Spotify Developer Tools](https://developer.spotify.com/)
-- Including links to the Spotify [API documentation](https://any-api.com/spotify_com/spotify_com/docs/API_Description), Genius [API documentation](https://rapidapi.com/Glavier/api/genius-song-lyrics1/), and any other resources used.
+- Spotify [API documentation](https://any-api.com/spotify_com/spotify_com/docs/API_Description), Genius [API documentation](https://rapidapi.com/Glavier/api/genius-song-lyrics1/).
