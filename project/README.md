@@ -29,6 +29,10 @@ Server links to a third party API.          + 0-10%
 Third party API requires authentication.    + 0-10%
 Hosted online (Pythonanywhere, Azure)       + 10%
 
+<https://nexlanglxm.pythonanywhere.com/>
+
+![current python anywhere](image.png)
+
 ## **Description**
 
 The SPG is a web application designed to create personalized playlists for users based on their music preferences. This project aims to provide an interactive platform where userscan input their favorite artists, genres, or songs, and the application interacts with the Spotify API to generate customized playlists.
