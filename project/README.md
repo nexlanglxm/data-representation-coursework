@@ -129,6 +129,17 @@ Upon accessing the application, navigate to the specified endpoints to perform a
 
 ## **References and Resources:**
 
-- [Flask documentation](https://github.com/pallets/flask/blob/3.0.x/docs/tutorial/static.rst)
-- [Spotify Developer Tools](https://developer.spotify.com/)
-- Spotify [API documentation](https://any-api.com/spotify_com/spotify_com/docs/API_Description), Genius [API documentation](https://rapidapi.com/Glavier/api/genius-song-lyrics1/).
+developer.spotify.com. (n.d.). Authorization Code with PKCE Flow | [Spotify Developer Tools](https://developer.spotify.com/)). [online] Available at: https://developer.spotify.com/documentation/web-api/tutorials/code-pkce-flow.
+
+docs.python.org. (n.d.). base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.9.5 documentation. [online] Available at: https://docs.python.org/3/library/base64.html.
+
+Pallets (n.d.). Static Files — [Flask documentation](https://github.com/pallets/flask/blob/3.0.x/docs/tutorial/static.rst) (3.0.x). [online] Github.com. Available at: https://github.com/pallets/flask/blob/3.0.x/docs/tutorial/static.rst [Accessed 22 Nov. 2023].
+
+PyPI. (n.d.). pkce: PKCE Python generator. [online] Available at: https://pypi.org/project/pkce/ [Accessed 14 Dec. 2023].
+
+Python.org. (2015). secrets — Generate secure random numbers for managing secrets — Python 3.7.1 documentation. [online] Available at: https://docs.python.org/3/library/secrets.html.
+
+- Spotify [API documentation](https://any-api.com/spotify_com/spotify_com/docs/API_Description)
+
+Future works:
+- Genius [API documentation](https://rapidapi.com/Glavier/api/genius-song-lyrics1/).
