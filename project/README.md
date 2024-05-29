@@ -4,35 +4,6 @@
 
 Write a project that demonstrates that you understand creating and consuming RESTful APIs.
 
-## Project Assessment Strategy
-
-Level 1: 40-45%
-
-- Basic FLASK server
-- REST API (to perform CRUD operations)
-- One database table
-- Accompanying web interface, using AJAX calls, to perform CRUD operations
-
-Level 2: 45-50%
-
-- More than one database table
-
-Level 3: 50-55%
-
-- Uses authorization
-
-EXTRAS:
-
-Web page looks nice.                        + 0-10%
-More complicated API.                       + 0-10%
-Server links to a third party API.          + 0-10%
-Third party API requires authentication.    + 0-10%
-Hosted online (Pythonanywhere, Azure)       + 10%
-
-<https://nexlanglxm.pythonanywhere.com/>
-
-![current python anywhere](image.png)
-
 ## **Description**
 
 The SPG is a web application designed to create personalized playlists for users based on their music preferences. This project aims to provide an interactive platform where userscan input their favorite artists, genres, or songs, and the application interacts with the Spotify API to generate customized playlists.
